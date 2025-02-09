@@ -1,8 +1,8 @@
 # A Simple Hello World Python Demo with bash
 
-git clone https://github.com/jeffmlpsi/helloworld-demo-python.git
+git clone https://github.com/korgit/advdevops-hw2b.git
 or
-git clone git@github.com:jeffmlpsi/helloworld-demo-python.git
+git clone git@github.com:korgit/advdevops-hw2b.git
 
 ## Python Code
 
