@@ -9,6 +9,21 @@ class MyHandler(BaseHTTPRequestHandler):
         # run df -h and put in output
         dfout = subprocess.check_output(["df", "-h"])
         self.wfile.write(dfout)
+        #run free -h and put in output
+        dfout = subprocess.check_output(["free", "-h"])
+        self.wfile.write("**********\n".encode())
+        self.wfile.write("Memory stats:\n".encode())
+        self.wfile.write(dfout)
+        self.wfile.write("**********\n".encode())
+        #run ps -aef and put in output
+        dfout = subprocess.check_output(["ps", "-aef"])
+        self.wfile.write("List of running processes:\n".encode())
+        self.wfile.write(dfout)
+        self.wfile.write("**********\n".encode())
+        #run lsblk and put in output
+        dfout = subprocess.check_output(["lsblk"])
+        self.wfile.write("List of Block devices:\n".encode())
+        self.wfile.write(dfout)
         self.wfile.write("**********\n".encode())
         self.wfile.write(b'''
           ##         .
